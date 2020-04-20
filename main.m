@@ -28,6 +28,13 @@ imshow(I_grayBlur10);
 subplot(2,2,4)
 imshow(I_grayBlur20);
 
+lowPass(I_grayBlur1);
+lowPass(I_grayBlur5);
+lowPass(I_grayBlur10);
+lowPass(I_grayBlur20);
+
+
+
 I_saltAndPepper=imread('Figure_1.png');
 I_noiseFree=median(I_saltAndPepper,3);
-I_noiseFreI_noiseFree=median(I_saltAndPepper,5);
+I_noiseFree2=median(I_saltAndPepper,5);
