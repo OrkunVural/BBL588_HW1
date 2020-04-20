@@ -1,0 +1,4 @@
+I=imread('SunnyLake.bmp');
+I_asd=rgb2gray(I);
+I_gray=toGrayscale(I,0.3,0.6,.114);
+imshow(I_gray);

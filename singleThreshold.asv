@@ -1,0 +1,18 @@
+function [outputLow,outputHigh] = singleThreshold(inputImage,threshold)
+
+for i=1:size(inputImage,1)
+    
+    for j=1:size(inputImage,2)
+        
+        if(inputImage(i,j)>threshold)
+            outputImage(i,j) = 1; %% If the value is over threshold it is converted to 1
+        else
+            outputImage(i,j) = 0; %% If the value is over threshold it is converted to 1
+        end
+        
+    end
+    
+end
+
+end
+
