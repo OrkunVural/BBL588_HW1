@@ -33,6 +33,11 @@ lowPass(I_grayBlur5);
 lowPass(I_grayBlur10);
 lowPass(I_grayBlur20);
 
+highPass(I_grayBlur1);
+highPass(I_grayBlur5);
+highPass(I_grayBlur10);
+highPass(I_grayBlur20);
+
 
 
 I_saltAndPepper=imread('Figure_1.png');
