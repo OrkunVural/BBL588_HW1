@@ -9,7 +9,7 @@ imshow(I_gray2);
 figure
 histGray=histogram(I_gray);
 
-I_bw=singleThreshold(I_gray,50);
+I_bw=singleThreshold(I_gray,57);
 figure 
 imshow(I_bw);
 
@@ -21,13 +21,16 @@ I_grayBlur20=gaussianBlur(I,20);
 figure
 subplot(2,2,1)
 imshow(I_grayBlur1);
+title('sigma = 1')
 subplot(2,2,2)
 imshow(I_grayBlur5);
+title('sigma = 5')
 subplot(2,2,3)
 imshow(I_grayBlur10);
+title('sigma = 10')
 subplot(2,2,4)
 imshow(I_grayBlur20);
-
+title('sigma = 20')
 lowPass(I_grayBlur1);
 lowPass(I_grayBlur5);
 lowPass(I_grayBlur10);

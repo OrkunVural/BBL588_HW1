@@ -1,4 +1,5 @@
 function [grayOut] = gaussianBlur(inputImage,sigma)
+    
     %channels of rgb image are separated
     red = inputImage(:, :, 1);
     green = inputImage(:, :, 2);
@@ -7,8 +8,8 @@ function [grayOut] = gaussianBlur(inputImage,sigma)
     redBlur = imgaussfilt(red,sigma);
     greenBlur = imgaussfilt(green,sigma);
     blueBlur = imgaussfilt(blue,sigma);
-    
-    grayOut = (redBlur + greenBlur + blueBlur)/3; 
+   
+    grayOut = (0.3*redBlur + 0.6*greenBlur + 0.1*blueBlur); 
     
     figure
     subplot(1,3,1)
@@ -17,6 +18,7 @@ function [grayOut] = gaussianBlur(inputImage,sigma)
     imshow(greenBlur);
     subplot(1,3,3)
     imshow(blueBlur);
+        
     
 end
 
